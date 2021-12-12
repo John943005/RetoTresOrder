@@ -25,13 +25,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @Document(collection="orders")
 public class Order {
-    public static String PENDING="Pendiente";
-    public static String APROVED="Aprobada";
-    public static String REJECTED="Rechazada";
+    public static String PENDING = "Pendiente";
+    public static String APROVED = "Aprobada";
+    public static String REJECTED = "Rechazada";
     @Id
     private Integer id;
     private Date registerDay;
-    private String Status;
+    private String status;
     private User salesMan;
     private Map<String, Product>products;
     private Map<String,Integer>quantities;

@@ -4,7 +4,7 @@
  */
 package com.example.retoDos.Order;
 
-import com.example.retoDos.Order.Order;
+
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.mongodb.repository.Query;
@@ -26,5 +26,5 @@ public interface OrderCrudRepository extends CrudRepository<Order,Integer>{
     @Query("{status: ?0}")
     List<Order> findByStatus(final String status);  
     
-    Optional<Order>findTopByOrderByIdDesc();
+   
 }

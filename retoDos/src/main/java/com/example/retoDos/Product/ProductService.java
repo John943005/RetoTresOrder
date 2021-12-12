@@ -54,9 +54,7 @@ public class ProductService {
                 if (product.getDescription() != null) {
                     dbProduct.get().setDescription(product.getDescription());
                 }
-                if (product.getPrice() != 0.0) {
-                    dbProduct.get().setPrice(product.getPrice());
-                }
+                
                 if (product.getPrice() != 0.0) {
                     dbProduct.get().setPrice(product.getPrice());
                 }
