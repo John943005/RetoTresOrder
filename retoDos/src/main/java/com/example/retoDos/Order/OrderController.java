@@ -4,7 +4,7 @@
  */
 package com.example.retoDos.Order;
 
-import com.example.retoDos.Order.Order;
+
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,16 +67,17 @@ public class OrderController {
     public List<Order>findByZone(@PathVariable("zona")String zona){
         return orderService.findByZone(zona);
     }
-    /*
-    @GetMapping("/date/{date}/{id}")
+    
+   
+     @GetMapping("/date/{date}/{id}")
     public List<Order> ordersSalesManByDate(@PathVariable("date") String date, @PathVariable("id") int id) {
         return orderService.ordersSalesManByDate(date, id);
     }
     
     
-    @GetMapping("/state/{state}/{id}")
-    public List<Order> ordersSalesManByState(@PathVariable("state") String date, @PathVariable("id") int id) {
+    @GetMapping("/state/{status}/{id}")
+   public List<Order> ordersSalesManByState(@PathVariable("state") String date, @PathVariable("id") Integer id) {
         return orderService.ordersSalesManByState(date, id);
-    }*/
+    }
 }
 

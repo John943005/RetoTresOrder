@@ -22,7 +22,7 @@ public class UserRepository {
         return (List<User>) userCrudRepository.findAll();
     }
 
-    public Optional<User> getUser(int id){
+    public Optional<User> getUser(Integer id){
         return userCrudRepository.findById(id);
     }
 
@@ -38,7 +38,7 @@ public class UserRepository {
         userCrudRepository.delete(user);
     }
 
-    public boolean emailExists(String email){
+    public boolean emailExiste(String email){
         Optional<User> user = userCrudRepository.findByEmail(email);
         return user.isPresent();
     }

@@ -32,7 +32,7 @@ public class UserService {
         }else{
             Optional<User> e = userRepository.getUser(user.getId());
             if(e.isEmpty()){
-                if(emailExists(user.getEmail())==false){
+                if(emailExiste(user.getEmail())==false){
                     return userRepository.save(user);
                 }else{
                     return user;
@@ -86,8 +86,8 @@ public class UserService {
         return userBoolean;
     }
 
-    public boolean emailExists(String email) {
-        return userRepository.emailExists(email);
+    public boolean emailExiste(String email) {
+        return userRepository.emailExiste(email);
     }
 
     public User authenticateUser (String email, String password) {
@@ -98,6 +98,7 @@ public class UserService {
             return user.get();
         }
     }
+
 
     
     

@@ -50,7 +50,7 @@ public class ProductController {
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public Product update(@RequestBody Product gadget){
-        return productService.save(gadget);
+        return productService.update(gadget);
     }
 
     @DeleteMapping("/{reference}")

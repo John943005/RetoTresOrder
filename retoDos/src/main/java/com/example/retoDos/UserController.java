@@ -5,6 +5,7 @@
 package com.example.retoDos;
 
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -34,6 +35,10 @@ public class UserController {
     public List<User> getAll() {
         return userService.getAll();
     }
+     @GetMapping("/{id}")
+    public Optional<User> getUser(@PathVariable("id") Integer id){
+        return userService.getUser(id);
+    }
 
     @PostMapping("/new")
     @ResponseStatus(HttpStatus.CREATED)
@@ -59,8 +64,8 @@ public class UserController {
     }
 
     @GetMapping("/emailexist/{email}")
-    public boolean emailExists (@PathVariable("email") String email){
-        return userService.emailExists(email);
+    public boolean emailExiste (@PathVariable("email") String email){
+        return userService.emailExiste(email);
     }
 }
 

@@ -4,8 +4,7 @@
  */
 package com.example.retoDos.Order;
 
-import com.example.retoDos.Order.OrderCrudRepository;
-import com.example.retoDos.Order.Order;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -38,7 +37,7 @@ public class OrderRepository {
         return (List<Order>)orderCrudRepository.findAll();
     }
 
-    public Optional<Order> getOrder(int id){
+    public Optional<Order> getOrder(Integer id){
         return orderCrudRepository.findById(id);
     }
 
@@ -88,6 +87,8 @@ public class OrderRepository {
 
         return orders;
     }
+
+    
     
     
 }
