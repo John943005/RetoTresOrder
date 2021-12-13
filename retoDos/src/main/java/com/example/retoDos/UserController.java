@@ -45,6 +45,9 @@ public class UserController {
     public void save(@RequestBody User user){
         userService.save(user);
     }
+    
+    
+   
 
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
